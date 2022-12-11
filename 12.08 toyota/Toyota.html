@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/12.08 toyota/reset.css">
+    <script src="https://kit.fontawesome.com/8dfe5139a6.js" crossorigin="anonymous"></script>
+    <style>
+        h1{
+            display: none;
+        }
+        ul li::before {
+            content: "\2022";
+            color: red;
+            font-weight: bold;
+            width: 1rem;
+        }
+
+        li {
+            text-indent: .9em;
+            font-weight: bolder;
+            font-size: 14px;
+            color: rgb(114, 114, 116);
+        }
+
+        .first {
+            margin: auto;
+            width: 900px;
+            height: 700px;
+            padding: 20px;
+        }
+
+        .first .first-flex {
+            display: flex;
+        }
+
+        .first .first-pad {
+            /*  */
+            height: 200px;
+            width: 350px;
+            background-color: rgb(243, 242, 241);
+            position: absolute;
+            z-index: -2;
+            left: 650px;
+            top: 60px;
+        }
+
+        .first .first-title {
+            /*  */
+            width: 280px;
+            position: absolute;
+            padding: 15px;
+            top: 23px;
+            margin-left: 40px;
+        }
+
+        .first .first-label {
+            align-items: center;
+            display: flex;
+            background-color: red;
+            color: aliceblue;
+        }
+
+        .first .first-label h2 {
+            color: aliceblue;
+            font-size: 40px;
+        }
+
+        .first .first-label span {
+            writing-mode: vertical-lr;
+            font-family: "Microsoft JhengHei";
+            font-weight: lighter;
+            font-size: 90px;
+            color: white;
+        }
+
+        .first .first-labeltext {
+            background-color: black;
+            line-height: 30px;
+            padding: 15px 10px 50px 10px;
+            color: aliceblue;
+            font-size: 15px;
+        }
+
+        .first .first-labeltext h3 {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .first .first-pic {
+            display: flex;
+            align-items: center;
+        }
+
+        .first .first-pic img {
+            /*  */
+            position: relative;
+            width: 65%;
+            z-index: -1;
+            margin-top: 102px;
+            margin-left: 200px;
+        }
+
+        .first .first-pic a {
+            font-size: 50px;
+            margin-left: -20px;
+            margin-top: 70px;
+            color: rgb(148, 32, 32);
+        }
+
+        .first .first-content {
+            margin-top: -28px;
+            width: 535px;
+            padding: 15px;
+            line-height: 25px;
+            margin-left: 84px;
+            background-color: rgb(243, 242, 241);
+        }
+
+        .first .first-content .first-line {
+            display: flex;
+            align-items: center;
+        }
+
+        .first .first-content .first-line h4 {
+            color: red;
+            font-weight: bolder;
+        }
+
+        .first .first-content .first-line hr {
+            background: red;
+            height: .5px;
+            width: 370px;
+        }
+
+        .first .first-content h5 {
+            background-color: black;
+            color: aliceblue;
+            font-size: 15px;
+            width: 100px;
+            text-align: center;
+        }
+
+
+
+        /* -------------second----------------- */
+        .second {
+            margin: auto;
+            width: 900px;
+            height: 600px;
+            padding: 20px;
+        }
+
+        .second .second-flex {
+            display: flex;
+            width: 100%;
+        }
+
+        .second .second-flex .second-title {
+            /*  */
+            width: 280px;
+            position: absolute;
+            padding: 10px;
+            left: 643px;
+            margin-top: 8px;
+        }
+
+        .second .second-pic img {
+            /*  */
+            position: relative;
+            width: 70%;
+            z-index: -1;
+            margin-top: 118px;
+            margin-left: 60px;
+        }
+
+        .second .second-pic {
+            display: flex;
+            align-items: center;
+        }
+
+        .second .second-pic a {
+            font-size: 50px;
+            color: rgb(148, 32, 32);
+            margin-bottom: -90px;
+            margin-right: -80px;
+        }
+
+        .second .second-flex .second-label {
+            display: flex;
+            align-items: center;
+            background-color: red;
+            justify-content: end;
+        }
+
+
+        .second .second-label h2 {
+            color: aliceblue;
+            font-size: 45px;
+        }
+
+        .second .second-label span {
+            writing-mode: vertical-lr;
+            font-family: "Microsoft JhengHei";
+            font-weight: lighter;
+            font-size: 90px;
+            color: white;
+        }
+
+        .second .second-labeltext h3 {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .second .second-labeltext {
+            background-color: black;
+            line-height: 30px;
+            padding: 15px 30px;
+            color: aliceblue;
+            font-size: 15px;
+        }
+
+        .second .second-content .second-line h4 {
+            color: red;
+            font-weight: bolder;
+        }
+
+        .second .second-content .second-line hr {
+            background: red;
+            height: .5px;
+            width: 370px;
+        }
+
+        .second .second-content .second-line {
+            display: flex;
+            align-items: center;
+        }
+
+        .second .second-content {
+            width: 535px;
+            padding: 10px 20px;
+            line-height: 25px;
+            background-color: rgb(243, 242, 241);
+            margin-top: -21px;
+            margin-left: 200px;
+        }
+
+
+        .second .second-content h5 {
+            background-color: black;
+            color: aliceblue;
+            font-size: 15px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .second .second-pad {
+            /*  */
+            height: 300px;
+            width: 450px;
+            background-color: rgb(243, 242, 241);
+            position: absolute;
+            z-index: -2;
+            right: 430px;
+            margin-top: 60px;
+        }
+
+        /* ---------third---------- */
+        .third {
+            margin: auto;
+            width: 900px;
+            height: 700px;
+            padding: 20px;
+        }
+
+        .third .third-flex {
+            display: flex;
+            width: 100%;
+        }
+
+
+        .third .third-pad {
+            /*  */
+            height: 250px;
+            width: 330px;
+            background-color: rgb(243, 242, 241);
+            position: absolute;
+            z-index: -2;
+            margin-top: 30px;
+            right: 240px;
+        }
+
+        .third .third-title {
+            /*  */
+            width: 280px;
+            position: absolute;
+            padding: 15px;
+            left: 185px;
+        }
+
+        .third .third-label {
+            align-items: center;
+            display: flex;
+            background-color: red;
+            color: aliceblue;
+        }
+
+        .third .third-label h2 {
+            color: aliceblue;
+            font-size: 40px;
+        }
+
+        .third .third-label span {
+            writing-mode: vertical-lr;
+            font-family: "Microsoft JhengHei";
+            font-weight: lighter;
+            font-size: 90px;
+            color: white;
+        }
+
+        .third .third-labeltext {
+            background-color: black;
+            line-height: 30px;
+            padding: 18px;
+            color: aliceblue;
+            font-size: 15px;
+        }
+
+        .third .third-labeltext h3 {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .third .third-pic {
+            display: flex;
+            align-items: center;
+        }
+
+        .third .third-pic img {
+            /*  */
+            position: relative;
+            width: 100%;
+            z-index: -1;
+            top: 114px;
+            left: 200px;
+        }
+
+        .third .third-pic a {
+            margin-left: 180px;
+            margin-top: 200px;
+            font-size: 50px;
+            color: rgb(148, 32, 32);
+        }
+
+        .third .third-content {
+            width: 535px;
+            padding: 15px;
+            background-color: rgb(243, 242, 241);
+            line-height: 25px;
+            position: absolute;
+            margin-top: 87px;
+            margin-left: 70px;
+        }
+
+        .third .third-content .third-line {
+            display: flex;
+            align-items: center;
+        }
+
+        .third .third-content .third-line h4 {
+            color: red;
+            font-weight: bolder;
+        }
+
+        .third .third-content .third-line hr {
+            background: red;
+            height: .5px;
+            width: 370px;
+        }
+
+        .third .third-content h5 {
+            background-color: black;
+            color: aliceblue;
+            font-size: 15px;
+            width: 100px;
+            text-align: center;
+        }
+
+        /* ---------fourth----------- */
+        .fourth {
+            margin: auto;
+            width: 900px;
+            height: 600px;
+            padding: 20px;
+        }
+
+        .fourth .fourth-flex {
+            display: flex;
+            width: 100%;
+        }
+
+        .fourth .fourth-flex .fourth-title {
+            /*  */
+            width: 300px;
+            position: absolute;
+            padding: 10px;
+            left: 643px;
+            margin-top: 8px;
+        }
+
+        .fourth .fourth-pic {
+            display: flex;
+            align-items: center;
+        }
+
+        .fourth .fourth-pic img {
+            /*  */
+            position: relative;
+            width: 80%;
+            z-index: -1;
+            margin-top: 118px;
+            margin-left: 60px;
+        }
+
+        .fourth .fourth-pic a {
+            font-size: 50px;
+            color: rgb(148, 32, 32);
+            margin-bottom: -100px;
+            margin-right: -80px;
+        }
+
+        .fourth .fourth-flex .fourth-label {
+            display: flex;
+            align-items: center;
+            background-color: red;
+            justify-content: end;
+        }
+
+
+        .fourth .fourth-label h2 {
+            color: aliceblue;
+            font-size: 45px;
+        }
+
+        .fourth .fourth-label span {
+            writing-mode: vertical-lr;
+            font-family: "Microsoft JhengHei";
+            font-weight: lighter;
+            font-size: 90px;
+            color: white;
+        }
+
+        .fourth .fourth-labeltext h3 {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .fourth .fourth-labeltext {
+            background-color: black;
+            line-height: 30px;
+            padding: 15px 30px;
+            color: aliceblue;
+            font-size: 15px;
+        }
+
+        .fourth .fourth-content .fourth-line h4 {
+            color: red;
+            font-weight: bolder;
+        }
+
+        .fourth .fourth-content .fourth-line hr {
+            background: red;
+            height: .5px;
+            width: 370px;
+        }
+
+        .fourth .fourth-content .fourth-line {
+            display: flex;
+            align-items: center;
+        }
+
+        .fourth .fourth-content {
+            width: 535px;
+            background-color: rgb(243, 242, 241);
+            padding: 10px 20px;
+            line-height: 25px;
+            margin-top: -25px;
+            margin-left: 200px;
+        }
+
+
+        .fourth .fourth-content h5 {
+            background-color: black;
+            color: aliceblue;
+            font-size: 15px;
+            width: 80px;
+            text-align: center;
+        }
+
+        .fourth .fourth-pad {
+            /*  */
+            height: 340px;
+            width: 450px;
+            background-color: rgb(243, 242, 241);
+            position: absolute;
+            z-index: -2;
+            right: 410px;
+            margin-top: 40px;
+        }
+
+        /* -------------------fifth--------------------- */
+        .fifth {
+            margin: auto;
+            width: 900px;
+            height: 700px;
+            padding: 20px;
+        }
+
+        .fifth .fifth-flex {
+            display: flex;
+            width: 100%;
+        }
+
+
+        .fifth .fifth-pad {
+            /*  */
+            height: 250px;
+            width: 320px;
+            background-color: rgb(243, 242, 241);
+            position: absolute;
+            z-index: -2;
+            margin-top: 30px;
+            right: 280px;
+        }
+
+        .fifth .fifth-title {
+            /*  */
+            width: 280px;
+            position: absolute;
+            padding: 15px;
+            left: 185px;
+        }
+
+        .fifth .fifth-label {
+            align-items: center;
+            display: flex;
+            background-color: red;
+            color: aliceblue;
+        }
+
+        .fifth .fifth-label h2 {
+            color: aliceblue;
+            font-size: 40px;
+        }
+
+        .fifth .fifth-label span {
+            writing-mode: vertical-lr;
+            font-family: "Microsoft JhengHei";
+            font-weight: lighter;
+            font-size: 90px;
+            color: white;
+        }
+
+        .fifth .fifth-labeltext {
+            background-color: black;
+            line-height: 30px;
+            padding: 18px;
+            color: aliceblue;
+            font-size: 15px;
+        }
+
+        .fifth .fifth-labeltext h3 {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .fifth .fifth-pic {
+            display: flex;
+            align-items: center;
+        }
+
+        .fifth .fifth-pic img {
+            /*  */
+            position: relative;
+            width: 90%;
+            z-index: -1;
+            top: 114px;
+            left: 200px;
+        }
+
+        .fifth .fifth-pic a {
+            margin-left: 180px;
+            margin-top: 200px;
+            font-size: 50px;
+            color: rgb(148, 32, 32);
+        }
+
+        .fifth .fifth-content {
+            width: 535px;
+            background-color: rgb(243, 242, 241);
+            padding: 15px;
+            line-height: 25px;
+            position: absolute;
+            margin-top: 85px;
+            margin-left: 70px;
+        }
+
+        .fifth .fifth-content .fifth-line {
+            display: flex;
+            align-items: center;
+        }
+
+        .fifth .fifth-content .fifth-line h4 {
+            color: red;
+            font-weight: bolder;
+        }
+
+        .fifth .fifth-content .fifth-line hr {
+            background: red;
+            height: .5px;
+            width: 370px;
+        }
+
+        .fifth .fifth-content h5 {
+            background-color: black;
+            color: aliceblue;
+            font-size: 15px;
+            width: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>五大優勢</h1>
+    <div class="main">
+        <section class="first">
+            <div class="first-flex">
+                <div class="first-title">
+                    <div class="first-label">
+                        <span>01</span>
+                        <h2>操控樂趣</h2>
+                    </div>
+                    <div class="first-labeltext">
+                        <h3>人人滿意的駕駛體驗</h3>
+                        <p>透過最佳重量分配，實現平順起步、直線穩定加速，過彎同時保持車身平穩帶給駕駛更靈敏的道路、反饋，享受隨心馳騁的行駛快感。
+                        </p>
+                    </div>
+                </div>
+                <div class="first-pic">
+                    <img src="/12.08 toyota/TOYOTA圖片/toyota1.png" alt="">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="first-pad"></div>
+            </div>
+            <div class="first-content">
+                <div class="first-line">
+                    <h4>因為我們做了這些革新</h4>
+                    <hr>
+                </div>
+                <h5 style="width: 90px;">低重心設計</h5>
+                <ul>
+                    <li>透過低重心設計,不僅呈現更低伏的外觀,更能減少身側傾,保持高速行駛穩定性。</li>
+                </ul>
+                <h5>車體剛性強化</h5>
+                <ul>
+                    <li>車身結構採用超高強度鋼材.提高車輛穩定性·時藉由雷射強化焊接技術,大幅增加焊點數量.提升車身抗扭剛性、強化駕馭穩定性及安全性。</li>
+                </ul>
+                <h5>四輪獨立懸吊</h5>
+                <ul>
+                    <li>搭載全新四輪獨立懸吊設定,透過懸吊的高承載強度,保持輪胎抓地力,時兼顧轉向靈敏度與清晰路感回饋,提升駕馭樂趣。</li>
+                </ul>
+            </div>
+        </section>
+        <section class="second">
+            <div class="second-flex">
+                <div class="second-title">
+                    <div class="second-label">
+                        <h2>安全守護</h2>
+                        <span>02</span>
+                    </div>
+                    <div class="second-labeltext">
+                        <h3>行車更安心的高剛性車體</h3>
+                        <p>您的愛車會妥善保護您,強悍穩固的車身可使您安全無虞。世界級的安全功能讓您輕鬆自如享受旅程、毫無後顧之憂。
+                        </p>
+                    </div>
+                </div>
+                <div class="second-pic">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <img src="/12.08 toyota/TOYOTA圖片/toyota2.png" alt="">
+
+                </div>
+                <div class="second-pad"></div>
+            </div>
+            <div class="second-content">
+                <div class="second-line">
+                    <h4>因為我們做了這些革新</h4>
+                    <hr>
+                </div>
+                <h5>主動安全</h5>
+                <ul>
+                    <li>
+                        以先進的TSS系,動偵測路況,助駕駛判斷路況並維持車安全。
+                </ul>
+                <h5>被動安全</h5>
+                <ul>
+                    <li>
+                        堅固的高剛性車體,使用熱沖壓材料的高強度抗扭鋼板,強化座對意外事故的保護力。
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="third">
+            <div class="third-flex">
+                <div class="third-title">
+                    <div class="third-label">
+                        <span>03</span>
+                        <h2>乘坐舒適</h2>
+                    </div>
+                    <div class="third-labeltext">
+                        <h3>令人放鬆的車室空間
+                        </h3>
+                        <p>車室空間設計著重人體工學，透過方向盤、踏板等位置優化，追求更舒適的駕駛位置，並以新型座椅設計，提高座椅包覆性，致力實現長途駕駛不疲勞的舒適駕馭體驗。
+                        </p>
+                    </div>
+                </div>
+                <div class="third-pic">
+                    <img src="/12.08 toyota/TOYOTA圖片/toyota3.png" alt="">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="third-pad">
+                </div>
+            </div>
+            <div class="third-content">
+                <div class="third-line">
+                    <h4>因為我們做了這些革新</h4>
+                    <hr>
+                </div>
+                <h5 style="width: 120px;">駕駛位置最佳化</h5>
+                <ul>
+                    <li>
+                        針對駕駛位置進行徹底的修改，讓駕馭者可如同握手般自然且舒適地操控方向盤。
+                </ul>
+                <h5 style="width: 80px">駕馭視野佳</h5>
+                <ul>
+
+                    <li>
+                        考量駕駛坐進車內的高度，透過前擋風玻璃位置的調整，達到盲區極小化，使駕駛視野更開闊，同步提升駕馭安全。
+                    </li>
+                </ul>
+                <h5>更寧靜的車室</h5>
+                <ul>
+                    <li>
+                        採用最新三層結構的隔音材料，與引擎、變速箱的零件改革，將座艙的震動抑制在最小限度，提供乘客舒適安靜的享受。
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="fourth">
+            <div class="fourth-flex">
+                <div class="fourth-title">
+                    <div class="fourth-label">
+                        <h2>以人為本</h2>
+                        <span>04</span>
+
+                    </div>
+                    <div class="fourth-labeltext">
+                        <h3>使用者導向的貼心設計
+                        </h3>
+                        <p>藉由高度人性化的介面組合、傳遞車輛資訊，豐富日常駕駛體驗。從提升油耗表現到行李廂空間最適化，均細心考量，更加貼近使用者真正所需與習慣，並給予即時回應。
+                        </p>
+                    </div>
+                </div>
+                <div class="fourth-pic">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <img src="/12.08 toyota/TOYOTA圖片/toyota4.png" alt="">
+
+                </div>
+                <div class="fourth-pad"></div>
+            </div>
+            <div class="fourth-content">
+                <div class="fourth-line">
+                    <h4>因為我們做了這些革新</h5>
+                        <hr>
+                </div>
+                <h5 style="width: 100px;">優異油耗表現</h5>
+                <ul>
+                    <li>
+                        以AURIS為例，更強勁的高效引擎將熱效率提升至40%，達到世界級水準，屢屢突破燃油效率新境界
+                </ul>
+                <h5 style="width: 130px">行李箱空間最適化</h5>
+                <ul>
+                    <li>
+                        以PRIUS為例，透過將電池位置移到後座下方，讓行李箱擁有更大的空間。
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="fifth">
+            <div class="fifth-flex">
+                <div class="fifth-title">
+                    <div class="fifth-label">
+                        <span>05</span>
+                        <h2>引以為傲</h2>
+
+                    </div>
+                    <div class="fifth-labeltext">
+                        <h3>極具吸引力的精心設計
+                        </h3>
+                        <p>TNGA車款擁有讓人忍不住回頭的新潮外觀、讓駕駛充滿自信的駕馭快感！不僅讓車主能展現個人風格，也能讓擁有者都能引以為傲。
+                        </p>
+                    </div>
+                </div>
+                <div class="fifth-pic">
+                    <img src="/12.08 toyota/TOYOTA圖片/toyota5.png" alt="">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <div class="fifth-pad"></div>
+            </div>
+            <div class="fifth-content">
+                <div class="fifth-line">
+                    <h4>因為我們做了這些革新</h4>
+                    <hr>
+                </div>
+                <h5>設計概念</h5>
+                <ul>
+                    <li>
+                        TNGA低重心設計，不僅呈現更低伏的運動化外觀，更講究高品質內裝一致性。
+                </ul>
+                <h5>環保概念</h5>
+                <ul>
+                    <li>
+                        為了對環境保護盡一份心力，我們全面提升傳統引擎、變速箱與油電複合動力的動力效能。
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
