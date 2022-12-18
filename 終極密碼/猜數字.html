@@ -19,7 +19,6 @@
             border-radius: 10%;
             position: relative;
             text-align: center;
-            line-height: 15px;
         }
 
         .box {
@@ -27,26 +26,27 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 550px;
-            height: 550px;
+            width: 500px;
+            height: 500px;
             box-sizing: border-box;
             overflow: hidden;
             border: 2px solid rgb(228, 153, 14);
             color: white;
-            padding: 20px;
+            padding: 25px;
         }
 
         .number-btn button {
             font-size: 20px;
             margin: 5px;
-            width: 65px;
-            height: 65px;
+            width: 62px;
+            height: 62px;
             font-weight: bolder;
             border-radius: 50%;
             background: rgb(239, 211, 159);
             outline: none;
             mix-blend-mode: screen;
             transition: 0.1s;
+            text-align: center;
         }
 
         .number-btn button::before {
@@ -109,6 +109,10 @@
             background: #75efeb;
             animation: animate 4s linear infinite;
 
+        }
+
+        .content {
+            line-height: 40px;
         }
 
         @keyframes animate {
