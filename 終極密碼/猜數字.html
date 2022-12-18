@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        .guessnum {
+            width: 600px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 5% auto;
+            height: 600px;
+            padding: 20px;
+            background-image: url(/夜空.jpg);
+            border-radius: 10%;
+            position: relative;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            box-sizing: border-box;
+            overflow: hidden;
+            border: 2px solid rgb(228, 153, 14);
+            color: white;
+            padding: 20px;
+        }
+
+        .number-btn button {
+            font-size: 20px;
+            margin: 5px;
+            width: 70px;
+            height: 70px;
+            font-weight: bolder;
+            border-radius: 50%;
+            background: rgb(239, 211, 159);
+            outline: none;
+            mix-blend-mode: screen;
+            transition: 0.1s;
+        }
+
+        .number-btn button::before {
+            content: '';
+        }
+
+        .number-btn button:hover {
+            background-color: rgb(228, 153, 14);
+            box-shadow: 0 0 2px rgb(186, 121, 0);
+        }
+
+
+        .guessnum h1 {
+            color: rgb(239, 200, 128);
+            font-size: 30px;
+            padding: 5px;
+        }
+
+        .line span:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #50dfdb;
+            animation: animate 4s linear infinite;
+        }
+
+        .line span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            box-sizing: border-box;
+
+        }
+
+        .line span:nth-child(1) {
+            transform: rotate(0deg);
+        }
+
+        .line span:nth-child(2) {
+            transform: rotate(90deg);
+        }
+
+        .line span:nth-child(3) {
+            transform: rotate(180deg);
+        }
+
+        .line span:nth-child(4) {
+            transform: rotate(270deg);
+        }
+
+        .line span:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #75efeb;
+            animation: animate 4s linear infinite;
+
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scaleX(-1);
+                transform-origin: left;
+            }
+
+            100% {
+                transform: scaleX(-1);
+                transform-origin: right;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="guessnum">
+        <div class="backgound-img">
+            <div class="box">
+                <div class="line">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="content">
+                    <h1>Guess Number</h1>
+                    <div class="view">
+                        <div class="show-guess">
+                            <input type="text" class="input-num" placeholder="Input number 0~100">
+                        </div>
+                        <div class="show-number">
+                            <p><span></span></p>
+                        </div>
+
+                    </div>
+                    <div class="number-btn">
+                        <button class="item" value="1">1</button>
+                        <button class="item" value="2">2</button>
+                        <button class="item" value="3">3</button>
+                        <br>
+                        <button class="item" value="4">4</button>
+                        <button class="item" value="5">5</button>
+                        <button class="item" value="6">6</button>
+                        <br>
+                        <button class="item" value="7">7</button>
+                        <button class="item" value="8">8</button>
+                        <button class="item" value="9">9</button>
+                        <br>
+                        <button class="reset">c</button>
+                        <button class="item" value="0">0</button>
+                        <button class="check">enter</button>
+                        <br>
+                        <button class="new" style="width: 100px;">reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="/猜數字.js"></script>
+
+
+</body>
+
+</html>
