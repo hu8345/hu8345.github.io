@@ -1,0 +1,85 @@
+
+
+ var 的作用域在函示內 - 函示作用域(function level scope)
+ let / const 的作用域在區塊內 - 區塊作用域(迴圈或條件式)(block level scope)
+ var 還有 提升, 暫時性死區及可重複宣告的特型
+ const 和 let 的差別在於 let 允許多次賦值，const 只能一次
+
+
+
+建立亂數
+
+輸入數字
+
+
+
+
+
+
+1.產生一個1到100的間的隨機數字
+	count guess =Math.floor(Math.random(100)*1);
+	//回傳1到100
+	//因為只產生一個亂數所以會使用 count
+
+2.請輸入數字
+
+	#非數字無法打出
+	#限制長度2
+
+
+
+
+3.數字監聽事件(電腦抓取輸入的數字)
+#(點及數字)(委派事件)
+
+#(委派函式)(點及完所做)
+把數字按鍵印到label上面
+let myBtn = document.querySelector('.item')
+concole.log(my)
+
+let myInput = document.querySelector('#num-input')
+
+
+4.接著檢查數字是否猜中(判斷使用者輸入數字是否符合答案)
+	if(input>=min-num&&-input<=max-num)
+
+	#數字猜對
+ 		if(newinput == correctnum)
+	 	顯示出:恭喜你!!猜對了
+
+	#數字猜錯(太小)
+		else if(input<correctnum)
+		//input值轉成min-num
+		min-num=input
+		 顯示出:請輸入(min-num)至(max-num)
+
+	#數字猜錯(太大)
+		else if(input>correctnum)
+		//input值轉成max-num
+		max-num=input
+		 顯示出:請輸入(min-num)至(max-num)
+	else
+	請輸入數字!?
+
+5.如果數字猜對：
+	#顯示恭喜訊息。
+	#使玩家不能再輸入更多猜測(避免把遊戲玩壞)。
+	#顯示控制鈕讓玩家可以重新開始遊戲。
+
+
+
+if {
+        //超過輸入範圍
+        if(parse <min || parse > max) {
+        alert('吃醉酒了嗎');
+        inputNum.value = '';
+    } else {
+        //數字輸入正確
+       else if (parse < answer) {
+            min = parse;
+            inputNum.value = '';
+        } else if (parse > answer) {
+            max = parse;
+            inputNum.value = '';
+        }
+    }
