@@ -16,7 +16,7 @@ for (let i = 1; i < 61; i++) {
 let container;
 let controlleft;
 let controlright;
-let index = [0];
+let index = 0;  //為了讓index抓到陣列資料先讓index設定為0(即為第一筆資料)
 let img = document.querySelector("#model img");
 
 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/toyota-360旋轉/reset.css">
+    <script src="https://kit.fontawesome.com/8dfe5139a6.js" crossorigin="anonymous"></script>
+    <style>
+        #model {
+            display: flex;
+            width: 1000px;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        #model img {
+            width: 100%;
+        }
+
+        #model button {
+            outline: none;
+            border-radius: 50%;
+            border: 0;
+            background-color: transparent;
+            font-size: 80px;
+            color: rgb(6, 6, 20);
+            padding: 10px;
+        }
+
+        #model button:hover {
+            color: #fa0;
+        }
+
+        .colorbtn {
+            display: block;
+            display: flex;
+            justify-content: center;
+
+            /* margin: auto; */
+        }
+
+        #red {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: 20px;
+            background-color: red;
+            border: 0;
+        }
+
+        #black:hover {
+            box-shadow: 0px 0px 5px rgb(19, 18, 18);
+        }
+
+        #red:hover {
+            box-shadow: 0px 0px 5px rgb(19, 18, 18);
+        }
+
+        #black {
+            border: 0;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: 20px;
+            background-color: black;
+        }
+
+        h1 {
+            font-size: 60px;
+            text-align: center;
+            margin: 20px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Toyota360度賞車</h1>
+    <div id="model">
+        <button id="leftbtn"><i class="fa-solid fa-arrow-left"></i></button>
+        <div id="car_pic"><img src=""></div>
+        <button id="rightbtn"><i class="fa-solid fa-arrow-right"></i></i></button>
+    </div>
+    <div class="colorname"></div>
+    <div class="colorbtn">
+        <button id="red"></button>
+        <button id="black"></button>
+    </div>
+</body>
+<script src="/toyota-360旋轉/toyota.js"></script>
+
+</html>
