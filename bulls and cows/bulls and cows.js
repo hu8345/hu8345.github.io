@@ -6,9 +6,6 @@ const _display = document.querySelector('.display');
 const _input = document.getElementById('inputArea');
 const _guess = document.getElementById('guess');
 
-//正則表達式(判定輸入的每個字元是否為0~9數字)
-const regex = /\d/;
-
 //變數宣告區
 const min = 0;
 const max = 9;
@@ -111,10 +108,10 @@ function checkIsWin() {
         _p.innerText = _input.value;
         _history.append(_button, _p);
         _display.append(_history);
-        WinAlert(answerStr);
         clearInput();
         _guess.disabled = true;
         _start.disabled = false;
+        alert('答對囉!!!')
     }
     else {
         setHistoryMsg();
@@ -174,9 +171,8 @@ _showAnswer.addEventListener('click', () => {
 _guess.addEventListener('click', () => {
     createGuessArr();
     distinct = [...new Set(guessArr)].length;
-    isNotNumber = regex.test(guess);
     isNoRepeat = distinct === 4 && guessArr.length === 4;
-    if (!isNotNumber) {
+    if (isNaN(_input.value)) {
             alert('請輸入數字');
             initializeGuessArr();
             clearInput();
