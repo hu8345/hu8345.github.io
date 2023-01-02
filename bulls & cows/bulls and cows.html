@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bulls & cows</title>
+    <link rel="stylesheet" href="/bulls & cows/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/bulls & cows/grid.css">
+    <style>
+        .wrap {
+            height: 100vh;
+        }
+
+        .container {
+            margin-top: 20px;
+            max-width: 700px;
+            height: 90vh;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 10px rgb(162, 159, 168) double;
+            border-radius: 5%;
+            background-image: url(/guess_number/snoopy.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .row {
+            margin: 10px;
+        }
+
+        .display_border {
+            height: 50vh;
+            width: 550px;
+            background-color: rgba(252, 247, 247, 0.797);
+            border-radius: 5%;
+        }
+
+        .display {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+            width: 100%;
+        }
+
+        .history {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .history p {
+            margin: 12px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <div class="wrap">
+        <div class="container">
+            <h1>bulls & cows</h1>
+            <!-- 功能區 -->
+            <div class="btngroup " role="group" aria-label="Basic outlined example">
+                <button type="button" class="btn btn-outline-primary " id="start">開始</button>
+                <button type="button" class="btn btn-outline-info" id="reset">重新開始</button>
+                <button type="button" class="btn btn-outline-warning " id="checkAnswer" disabled>看答案</button>
+            </div>
+
+            <div class="row justify-content-center box">
+                <div class="display_border">
+                    <div class="display">
+                        <!-- history -->
+                        <!-- <div class="answer">*A*B</div>
+                <span>????</span> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- 輸入區 -->
+            <div class="input-group mb-3" id="function">
+                <span class="input-group-text">輸入</span>
+                <!-- <input type="text" class="form-control" placeholder="請輸入4位不重覆數字" aria-label="number"
+                    aria-describedby="button-addon2"> -->
+                <input type="text" maxlength="4" class="form-control" placeholder="請輸入4位不重覆數字" aria-label="number"
+                    id="inputArea">
+                <button class="btn btn-outline-primary " type="button" id="guess">猜!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/bulls & cows/bulls and cows.js"></script>
+</body>
+
+</html>
