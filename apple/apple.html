@@ -1,63 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apple_fake</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/apple/reset.css">
-    <link rel="stylesheet" href="/apple/apple.css">
+    <!-- <link rel="stylesheet" href="/apple/grid.css"> -->
+    <style>
+        .main_nav {
+            margin: 20px;
+            text-align: center;
+        }
 
+        .product {
+            /* display: flex; */
+            align-items: center;
+            margin: 10px;
+        }
+
+        .title {
+            width: 100px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+        .color {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px black;
+        }
+
+
+        .content:hover {
+            box-shadow: 0px 2px 5px rgb(131, 128, 128);
+        }
+
+
+
+        h2 {
+            font-weight: bolder;
+            font-size: 30px;
+            margin: 10px 0px;
+        }
+
+        span {
+            font-size: 35px;
+            color: rgb(139, 132, 132);
+            margin-top: 20px;
+        }
+
+
+
+        .total {
+            font-weight: bolder;
+            font-size: 40px;
+        }
+
+        .img {
+            vertical-align: middle;
+
+        }
+
+        .pt-2,
+        .price  {
+            font-family: sans-serif;
+        }
+
+        .size {
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <input type="checkbox" name="" id="menu_control">
-    <div class="header">
-        <h1 class="logo">
-            <a href="#"><img src="https://picsum.photos/60/40/?random=10"></a>
-        </h1>
-        <label for="menu_control" class="menu_btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <nav class="drop-down-menu">
-            <ul>
-                <li class="list">
-                    <div class="list-item">
-                        <a href="#">iPhone</a>
-                    </div>
-                </li>
-                <li class="list">
-                    <div class="list-item">
-                        <a href="#">iPad</a>
-                    </div>
-                </li>
-                <li class="list">
-                    <div class="list-item">
-                        <a href="#">Mac</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <img src="" alt="">
-            </div>
-
-            <div class="col-12 col-md-6">
-                <div class="row">
-                    <div class="col-12 col-md-3"></div>
-                    <div class="col-12 col-md-3"></div>
-                    <div class="col-12 col-md-3"></div>
-                </div>
-
-            </div>
+    <div class="main_nav">
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="main_btn btn btn-outline-primary">iPhone14</button>
+            <button type="button" class="main_btn btn btn-outline-primary">iPad</button>
+            <button type="button" class="main_btn btn btn-outline-primary">Mac</button>
         </div>
     </div>
+    <div class="row product">
+        <!-- <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="pic">
+                            <img src="/apple/apple/iphone14/iphone14-hero_all_colors.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">  //detailbox
+                        <h2>顏色</h2>
+                        <div class="color">
+                            <button>midnight</button>
+                            <button>blue</button>
+                            <button>purple</button>
+                            <button>red</button>
+                            <button>starlight</button>
+                        </div>
+                        <h2>規格</h2>
+                        <div class="storage">
+                            <button>128GB</button>
+                            <button>256GB</button>
+                            <button>512GB</button>
+                        </div>
+                        <h2>價格試算</h2>
+                        <p id="price">NT$27900</p>
+                    </div>
+                </div>
+            </div> -->
+    </div>
+
+
+
+
+
+    <script src="/apple/apple.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
