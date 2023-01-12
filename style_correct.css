@@ -1,6 +1,5 @@
 :root {
-    /*根目錄選取器-變數設定*/
-    --primary-clr: #b38abb;
+    --primary-clr: #b38add;
 }
 
 * {
@@ -8,6 +7,21 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+}
+
+/* nice scroll bar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-clr);
+    border-radius: 50px;
 }
 
 body {
@@ -20,8 +34,8 @@ body {
 
 .container {
     position: relative;
-    width: 1000px;
-    min-height: 750px;
+    width: 1200px;
+    min-height: 850px;
     margin: 0 auto;
     padding: 5px;
     color: #fff;
@@ -30,7 +44,7 @@ body {
     background-color: #373c4f;
 }
 
-.container .left {
+.left {
     width: 60%;
     padding: 20px;
 }
@@ -48,6 +62,7 @@ body {
     background-color: #fff;
 }
 
+/* set after behind the main element */
 .calendar::before,
 .calendar::after {
     content: "";
@@ -57,7 +72,7 @@ body {
     width: 12px;
     height: 97%;
     border-radius: 0 5px 5px 0;
-    background-color: #d3d5d6d7;
+    background-color: #d3d4d6d7;
     transform: translateY(-50%);
 }
 
@@ -69,22 +84,19 @@ body {
 
 .calendar .month {
     width: 100%;
-    height: 50px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 70px;
-    font-weight: 500;
-    margin-top: 50px;
+    padding: 0 50px;
     font-size: 1.2rem;
+    font-weight: 500;
     text-transform: capitalize;
-    /*capitalize首字母大寫*/
 }
 
 .calendar .month .prev,
 .calendar .month .next {
     cursor: pointer;
-    /*cursor 屬性可以改變滑鼠游標的形狀*/
 }
 
 .calendar .month .prev:hover,
@@ -99,8 +111,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0px 20px;
-    font-weight: 500;
     font-size: 1rem;
+    font-weight: 500;
     text-transform: capitalize;
 }
 
@@ -134,7 +146,23 @@ body {
     border: 1px solid #f5f5f5;
 }
 
-.calendar .day:not(.prev-date, .next-date):hover {
+.calendar .days .day:nth-child(7n + 1) {
+    border-left: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:nth-child(7n) {
+    border-right: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:nth-child(-n + 7) {
+    border-top: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:nth-child(n + 29) {
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:not(.prev-date, .next-date):hover {
     color: #fff;
     background-color: var(--primary-clr);
 }
@@ -170,7 +198,7 @@ body {
 }
 
 .calendar .days .event::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -181,7 +209,7 @@ body {
     background-color: var(--primary-clr);
 }
 
-.calendar .days .event:hover::after {
+.calendar .days .day:hover.event::after {
     background-color: #fff;
 }
 
@@ -216,9 +244,10 @@ body {
 
 .calendar .goto-today .goto input {
     width: 100%;
-    height: 25px;
+    height: 30px;
     outline: none;
     border: none;
+    border-radius: 5px;
     padding: 0 20px;
     color: var(--primary-clr);
     border-radius: 5px;
@@ -226,7 +255,7 @@ body {
 
 .calendar .goto-today button {
     padding: 5px 10px;
-    border: 1 solid var(--primary-clr);
+    border: 1px solid var(--primary-clr);
     border-radius: 5px;
     background-color: transparent;
     cursor: pointer;
@@ -260,7 +289,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
-    padding-left: 60px;
+    padding-left: 70px;
     margin-top: 50px;
     margin-bottom: 20px;
     text-transform: capitalize;
@@ -268,9 +297,10 @@ body {
 
 .right .today-date .event-day {
     font-size: 2rem;
+    font-weight: 500;
 }
 
-.today-date .event-date {
+.right .today-date .event-date {
     font-size: 1rem;
     font-weight: 400;
     color: #878895;
@@ -284,7 +314,7 @@ body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    padding: 4px;
+    padding-left: 4px;
 }
 
 .events .event {
@@ -298,10 +328,11 @@ body {
     padding: 0 20px;
     padding-left: 50px;
     color: #fff;
-    cursor: pointer;
     background: linear-gradient(90deg, #3f4458, transparent);
+    cursor: pointer;
 }
 
+/* even event */
 .events .event:nth-child(even) {
     background: transparent;
 }
@@ -314,8 +345,6 @@ body {
     display: flex;
     align-items: center;
     pointer-events: none;
-    /*對滑鼠事件的屬性，預設值為auto，若設定值為none時，則可以穿越該元素。 也就是說，原本滑鼠無法點擊的下層div，設定為pointer-event: none的話，可以讓鼠標直接穿越上層div，對下層div進行動作。*/
-    
 }
 
 .events .event .title .event-title {
@@ -324,13 +353,12 @@ body {
     margin-left: 20px;
 }
 
-.events .event .title i {
+.events .event i {
     color: var(--primary-clr);
     font-size: 0.5rem;
 }
 
-.events .event:hover .title i,
-.events .event:hover .event-time {
+.events .event:hover i {
     color: #fff;
 }
 
@@ -342,12 +370,18 @@ body {
     pointer-events: none;
 }
 
+.events .event:hover .event-time {
+    color: #fff;
+}
+
+/* add tick in event after */
 .events .event::after {
-    content: "√";
+    content: "✓";
     position: absolute;
     top: 50%;
     right: 0;
     font-size: 3rem;
+    line-height: 1;
     display: none;
     align-items: center;
     justify-content: center;
@@ -360,6 +394,32 @@ body {
     display: flex;
 }
 
+.add-event {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #878895;
+    border: 2px solid #878895;
+    opacity: 0.5;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.add-event:hover {
+    opacity: 1;
+}
+
+.add-event i {
+    pointer-events: none;
+}
+
 .events .no-event {
     width: 100%;
     height: 100%;
@@ -367,9 +427,10 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    font-size: 500;
-    color: #878787;
+    font-weight: 500;
+    color: #878895;
 }
+
 .add-event-wrapper {
     position: absolute;
     bottom: 100px;
@@ -380,7 +441,7 @@ body {
     border-radius: 5px;
     background-color: #fff;
     transform: translateX(-50%);
-    transition: max-height 0.5s;
+    transition: max-height 0.5s ease;
 }
 
 .add-event-wrapper.active {
@@ -447,8 +508,7 @@ body {
 }
 
 .add-event-body .add-event-input input:focus {
-    /*focus:接受鍵盤事件或其他用戶輸入的元素*/
-    border-color: var(--primary-clr);
+    border-bottom: 1px solid var(--primary-clr);
 }
 
 .add-event-body .add-event-input input:focus::placeholder {
@@ -462,7 +522,7 @@ body {
     padding: 20px;
 }
 
-.add-event-btn {
+.add-event-footer .add-event-btn {
     height: 40px;
     font-size: 1rem;
     font-weight: 500;
@@ -476,33 +536,81 @@ body {
     border: 1px solid var(--primary-clr);
 }
 
-.add-event-btn:hover {
+.add-event-footer .add-event-btn:hover {
+    background-color: transparent;
     color: var(--primary-clr);
-    background-color: transparent;
 }
 
-.add-event {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: #878895;
-    border: 2px solid #878895;
-    opacity: 0.5;
-    border-radius: 50%;
-    background-color: transparent;
-    cursor: pointer;
+/* media queries */
+
+@media screen and (max-width: 1000px) {
+    body {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .container {
+        min-height: 100vh;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .container .left {
+        width: 100%;
+        height: 100%;
+        padding: 20px 0;
+    }
+
+    .container .right {
+        width: 100%;
+        height: 100%;
+        padding: 20px 0;
+    }
+
+    .calendar::before,
+    .calendar::after {
+        top: 100%;
+        left: 50%;
+        width: 97%;
+        height: 12px;
+        border-radius: 0 0 5px 5px;
+        transform: translateX(-50%);
+    }
+
+    .calendar::before {
+        width: 94%;
+        top: calc(100% + 12px);
+    }
+
+    .events {
+        padding-bottom: 340px;
+    }
+
+    .add-event-wrapper {
+        bottom: 100px;
+    }
 }
 
-.add-event:hover {
-    opacity: 1;
-}
+@media screen and (max-width: 500px) {
+    .calendar .month {
+        height: 75px;
+    }
 
-.add-event i {
-    pointer-events: none;
+    .calendar .weekdays {
+        height: 50px;
+    }
+
+    .calendar .days .day {
+        height: 40px;
+        font-size: 0.8rem;
+    }
+
+    .calendar .days .day.active,
+    .calendar .days .day.today {
+        font-size: 1rem;
+    }
+
+    .right .today-date {
+        padding: 20px;
+    }
 }
