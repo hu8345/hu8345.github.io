@@ -84,7 +84,7 @@ function initCalendar() {
     const nextDays = 7 - lastDay.getDay() - 1;
 
     //update date top of calendar
-    date.innerHTML = year + months[month] + "";
+    date.innerHTML = year +"   "+ months[month] + "";
 
     //adding days on dom
     let days = "";

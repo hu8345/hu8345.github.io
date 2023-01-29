@@ -55,8 +55,7 @@ function renderMarker() {
 
         marker.bindPopup(
             `
-        <h4>${deta.town}</h4>
-        <p>店名:${deta.name}</p>
+        <h5>${deta.name}</h5>
         <p>電話:${deta.tel}</p>
         <p>營業時間:${deta.opentime}</p>
 
