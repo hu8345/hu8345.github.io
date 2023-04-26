@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        :root {
+            /*---------主色調-----------*/
+            --primary: #faf6ee;
+            --secondary: #b38932;
+            --third: #efe8db;
+            --primary_btn: #f6931f;
+            --hover_btn_bg: #fea741;
+            --white: #fff;
+            --shadow: rgb(115, 112, 112);
+            --dark: rgb(43, 42, 55);
+            --darkblue: rgba(41, 97, 194, 0.735);
+            --border: #dfdbdb;
+            --smoke: #c0bdbd;
+        }
+
+        .bg {
+            height: 100vh;
+            background-color: var(--primary);
+        }
+
+        .wrapper {
+            line-height: 1.6;
+            border-radius: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            position: relative;
+            margin-top: 150px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .btn-zuker-primary {
+            background-color: var(--primary_btn);
+            font-size: 18px;
+            color: var(--white);
+        }
+
+        .btn-zuker-primary:hover,
+        .btn-zuker-primar:active,
+        .btn-zuker-primary:focus {
+            background-color: #fea741;
+        }
+
+      
+      
+    </style>
+</head>
+
+<body>
+    <div class="bg w-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 m-auto ">
+                    <div class="wrapper ">
+                        <h3 class="password-reset__heading text-center m-4">忘記密碼了嗎？</h3>
+                        <form asp-action="ForgotPassword" class="password-reset__form" method="post">
+                            <div class="form-group m-4">
+                                <input asp-for="Email" name="Email" autofocus="autofocus" class="form-control"
+                                    type="text" id="user_email" placeholder="請輸入您註冊的email" required />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <input type="submit" name="commit" value="送出" class="btn btn-zuker-primary mb-4 w-75" />
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

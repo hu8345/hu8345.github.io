@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+        :root {
+            --primary: #faf6ee;
+            --secondary: #b38932;
+            --third: #efe8db;
+            --primary_btn: #f6931f;
+            --hover_btn_bg: #fea741;
+            --white: #fff;
+            --shadow: rgb(115, 112, 112);
+            --dark: rgb(43, 42, 55);
+            --darkblue: rgba(41, 97, 194, 0.735);
+            --border: #dfdbdb;
+            --smoke: #c0bdbd;
+        }
+
+        body {
+            font-family: Quicksand, "Noto Sans TC", -apple-system, "PingFang TC", BlinkMacSystemFont, Roboto, Ubuntu, "Noto Sans TC", "Segoe UI", "Helvetica Neue", Helvetica, "Source Han Sans TC", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .nofound {
+            font-family: Quicksand, "Noto Sans TC", -apple-system, "PingFang TC", BlinkMacSystemFont, Roboto, Ubuntu, "Noto Sans TC", "Segoe UI", "Helvetica Neue", Helvetica, "Source Han Sans TC", sans-serif;
+            background-color: var(--primary);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        .nofound .pic {
+            margin-right: 70px;
+        }
+
+        .nofound .pic img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .nofound .context h2 {
+            font-size: 2.5rem;
+            font-weight: bolder;
+            padding: 10px 0px;
+        }
+
+        .nofound .context .msg {
+            font-size: 1.2rem;
+        }
+
+        @media screen and (min-width:768px) {
+            .nofound {
+                padding-right: 50px;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .nofound .pic {
+                width: 400px;
+                height: 300px;
+                margin-right: 0px;
+                margin-bottom: 70px;
+
+            }
+
+            .nofound .pic img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .nofound .context {
+                line-height: 30px;
+            }
+
+            .nofound .context .msg {
+                font-size: 1.4rem;
+                ;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="nofound">
+            <div class="pic">
+                <img src="/404/img/404-bg2.png">
+            </div>
+            <div class="context">
+                <h2>糟糕!</h2>
+                <div class="msg">
+                    <p>錯誤代碼 : 404</p>
+                    <p>我們似乎無法找到您要找的頁面。</p>
+                </div>
+                <a href="">回首頁</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

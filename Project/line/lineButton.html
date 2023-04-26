@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        .Linebtn {
+            border: none;
+            background-color: #4bcb25;
+            border-radius: 50px;
+            width: 200px;
+        }
+
+        .Linebtn img {
+            width: 100%;
+
+        }
+
+        .modal-header .pic {
+            width: 80px;
+        }
+
+        .modal-header .pic img {
+            width: 100%;
+        }
+
+        .modal-footer .btn {
+            width: 150px;
+            border: none;
+        }
+
+        .modal-footer .btn img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <!-- Button trigger modal -->
+        <button class="Linebtn" data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
+            <img src="/line/line10.png" alt="">
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLabel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="pic">
+                            <img src="/fontpage_2/img/logo-removebg.png" alt="">
+                        </div>
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">寓閣</h1>
+                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Hugo的LINE官方帳號登場囉!<br>
+                            Hugo將會提供最新的活動資訊給大家，點擊下方連結，將我們的帳號加入好友來接收最新資訊。
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" />
+                        <label for="subscribeNews">不再顯示</label>
+                        <button class="btn " data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+                            <img src="./LINE_Brand.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">QR code</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+                            上一頁
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script>
+        const myModel = new bootstrap.Modal('#exampleModalToggle');
+        const subscribeNews = document.getElementById('subscribeNews');
+
+        // 检查 localStorage 中是否有保存的 checkbox 狀態
+        const isChecked = localStorage.getItem('subscribeNews') === 'true';
+        if (isChecked) {
+            // 如果 checkbox 已勾選，隐藏視窗
+            myModel.hide();
+        }
+
+        // 監聽 checkbox 狀態變化
+        subscribeNews.addEventListener('change', (event) => {
+            debugger
+            if (event.target.checked) {
+                // 如果 checkbox 被勾选，將狀態保存到 localStorage 中
+                localStorage.setItem('subscribeNews', true);
+            } else {
+                // 如果 checkbox 被取消勾選，從 localStorage 中删除保存的狀態
+                localStorage.removeItem('subscribeNews');
+            }
+        });
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (isChecked) {
+                myModel.hide();
+            }
+            else {
+                myModel.show();
+            }
+        });
+
+    </script>
+</body>
+
+</html>

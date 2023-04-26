@@ -42,7 +42,7 @@ header h1 {
 
 #new-task-input,
 #new-task-submit,
-.text,
+.textbox,
 button {
     appearance: none;
     border: none;
@@ -109,7 +109,7 @@ main {
     display: flex;
 }
 
-#tasks .task .content .text {
+#tasks .task .content .textbox {
     font-size: 1.0rem;
     color: var(--gray);
     width: 100%;

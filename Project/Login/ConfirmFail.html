@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        .bg {
+            background-color: #faf6ee;
+            min-height: 100vh;
+            padding-top: 5%;
+        }
+
+        .bg .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bg .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            border-style: double;
+            border-color: #b28b5e;
+            border-width: 3px;
+        }
+
+        .pic {
+            width: 300px;
+        }
+
+        .pic img {
+            width: 100%;
+        }
+
+        .wrapper h5 {
+            font-weight: bolder;
+            color: #f6931f;
+        }
+
+        .wrapper {
+            text-align: center;
+        }
+
+        .wrapper h4 {
+            font-weight: bolder;
+            color: red;
+        }
+
+        @media screen and (max-width:768px) {
+            .bg .container {
+                border-style: hidden;
+                padding: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg w-100 ">
+        <div class="container ">
+            <div class="row">
+                <div class="pic">
+                    <img src="/Login/ConfirmFail.png" alt="">
+                </div>
+                <div class="col-12 col-md-8 m-auto p-2 ">
+                    <div class="wrapper">
+                        <h4>時間超過10分鐘</h4>
+                        <p>很抱歉您尚未註冊成功，請至登入頁面點選"重新寄送驗證信"</p>
+                        <h5>六秒後跳回至首頁</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+#pic {
+    background-color: #000;
+    align-items: center;
+}
+
+body {
+    background-color: var(--primary);
+}
+
+.carousel-item img {
+    height: 100vh;
+    object-fit: contain;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    border-radius: 50px;
+}
+
+.title-logo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.container {
+    margin: auto;
+    max-width: 900px;
+}
+
+h2 {
+    line-height: 2;
+    display: inline-block;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+}
+
+.title span {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+}
+
+.area {
+    font-weight: 400;
+    color: #777;
+}
+
+.rent {
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #f6931f;
+    margin: 0px 20px 10px 0px;
+    padding: 10px 30px;
+}
+
+.rent:hover {
+    background-color: #FEA741;
+    color: #fff;
+}
+
+.rent {
+    font-weight: 900;
+    color: #fff;
+}
+
+.details {
+    display: flex;
+    margin: 20px 0;
+}
+
+.details .icon {
+    display: flex;
+    margin: 0 10px;
+}
+
+.details .icon p {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.details .col-4 {
+    flex: auto;
+}
+
+i.fa-solid {
+    font-size: 30px;
+    color: #000;
+}
+
+.hous-data {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+h3 {
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+section+section {
+    border-top: 10px solid #b38932;
+}
+
+.facility img {
+    width: 50px;
+}
+
+.hous-data>span {
+    font-size: 12px;
+    color: #777;
+}
+
+.header,
+.header p {
+    text-align: center;
+    display: block;
+    font-weight: 600;
+}
+
+.icon,
+.icon p {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media screen and (width<=768px) {
+    .title-logo {
+        margin: 20px auto;
+        justify-content: center;
+    }
+
+    .title {
+        display: block;
+        text-align: center;
+    }
+
+    .title span {
+        display: block;
+    }
+
+    .rent {
+        margin: auto;
+    }
+
+    .details {
+        flex-wrap: wrap;
+    }
+
+    .details .icon {
+        margin: 10px 0;
+    }
+
+    .carousel-item img {
+        height: auto;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table-active {
+        text-align: right;
+        position: relative;
+    }
+
+    .table-active td::before {
+        content: attr(data-title);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+}
+
+#map {
+    height: 400px;
+}

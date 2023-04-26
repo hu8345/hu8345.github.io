@@ -1,0 +1,150 @@
+:root {
+    --primary: #faf6ee;
+    --secondary: #b38932;
+    --third: #efe8db;
+    --primary_btn: #f6931f;
+    --hover_btn_bg: #fea741;
+    --white: #fff;
+    --shadow: rgb(115, 112, 112);
+    --dark: rgb(43, 42, 55);
+    --darkblue: rgba(41, 97, 194, 0.735);
+    --border: #dfdbdb;
+    --smoke: #c0bdbd;
+}
+
+body {
+    font-family: Quicksand, "Noto Sans TC", -apple-system, "PingFang TC", BlinkMacSystemFont, Roboto, Ubuntu, "Noto Sans TC", "Segoe UI", "Helvetica Neue", Helvetica, "Source Han Sans TC", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/*--------------navbar-----------*/
+.navbar {
+    --bs-navbar-padding-y: 0rem;
+}
+
+nav .container-fluid {
+    border-bottom: #efdbb4 solid 5px;
+}
+
+nav .container-fluid .logo {
+    width: 60px;
+    height: 60px;
+}
+
+nav .container-fluid .logo img {
+    width: 120%;
+}
+
+/*----------footer--------------*/
+footer {
+    background-color: var(--third);
+    color: var(--primary_btn);
+    position: relative;
+
+}
+
+.solgan,
+.problem,
+.term {
+    border-bottom: 1px solid var(--secondary);
+    padding: 20px 0px;
+}
+
+.solgan {
+    padding-left: 35px;
+}
+
+footer .container .solgan a {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+footer .container .solgan p {
+    color: #564523;
+    font-size: 1rem;
+}
+
+footer .container .problem .survice #span,
+footer .container .term .survice #span {
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+footer .container .problem .survice a,
+footer .container .term .survice a {
+    color: #848383;
+    font-size: 1rem;
+}
+
+footer .container .problem .survice a:hover,
+footer .container .term .survice a:hover {
+    color: var(--dark);
+    font-size: 1rem;
+}
+
+footer .container .contact {
+    padding: 20px;
+    display: flex;
+
+}
+
+footer .container .contact i {
+    color: #848383;
+    font-size: 2rem;
+    padding-right: 10px;
+}
+
+footer .container .contact li i:hover {
+    color: var(--dark);
+    font-size: 2rem;
+    padding-right: 10px;
+
+}
+
+
+@media screen and (min-width:768px) {
+    /*---------fooster-----------*/
+    .container .contact {
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    footer .container .row .col-md-3 .survice {
+        margin-top: 100px 0px;
+    }
+
+    footer .container .solgan,
+    .problem,
+    .term {
+        border-bottom: none;
+    }
+
+    footer .container .problem,
+    .term,
+    footer .solgan p {
+        margin-top: 10px;
+    }
+
+    footer .container .problem {
+        padding-left: 40px;
+    }
+
+    footer .container .problem,
+    .term {
+        text-align: justify;
+    }
+
+    footer .contain .context .problem .survice a,
+    footer .contain .context .term .survice a {
+        padding: 0;
+    }
+}

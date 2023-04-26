@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>email認證信</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+        :root {
+            --second: #b38932;
+            --btn: #f6931f;
+            --footer: #cebe9f;
+            --white: #fff;
+            --shadow: rgb(151, 146, 146);
+            --dark: rgb(43, 42, 55);
+            --darkblue: rgba(41, 97, 194, 0.735);
+            --border: #dfdbdb;
+            --smoke: #c0bdbd;
+            --main: #faf6ee
+        }
+
+        /* body{
+            height: 100vh;
+        } */
+
+        .email {
+            font-family: Quicksand, "Noto Sans TC", -apple-system, "PingFang TC", BlinkMacSystemFont, Roboto, Ubuntu, "Noto Sans TC", "Segoe UI", "Helvetica Neue", Helvetica, "Source Han Sans TC", sans-serif;
+            background-color: var(--main);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            height: 100vh;
+        }
+
+        .email .pic {
+            width: 300px;
+            height: 300px;
+        }
+
+        .email .pic img {
+            width: 100%;
+            padding-top: 60px;
+        }
+
+        .email .context {
+            width: 300px;
+        }
+
+        .email .context h1 {
+            color: #b38932;
+            font-size: 2rem;
+            font-weight: bolder;
+            padding: 20px 0px;
+        }
+
+        .email .context p {
+            font-size: 1.2rem;
+        }
+
+        @media screen and (min-width:768px) {
+
+            .email {
+                
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .email .context {
+                width: 540px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email">
+        <div class="pic"><img src="./img/email.png" alt=""></div>
+        <div class="context">
+            <h1> 請完成email認證</h1>
+            <div class="thanks">
+                <p>感謝您註冊寓閣</p>
+                <p>我們已寄一封「email認證信」至您的信箱:ca8345@gmail.com</p>
+                <p>請前往至信箱收信，並點擊信中的認證連結，即可完成認證。</p>
+            </div>
+            <div class="contact">
+                <p> 此郵件由www.寓格.com.tw寄送，請勿直接回覆</p>
+                <p> 客服電话:02-5332-3000 email:servioo@寓格.com.tw</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

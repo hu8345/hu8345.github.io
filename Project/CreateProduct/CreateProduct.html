@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./a.css">
+    <link rel="stylesheet" href="./scss/supplier.css">
+    <script src="https://kit.fontawesome.com/4d9c8bb258.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script> -->
+    <link rel="stylesheet" href="./froala_editor_4.0.18/css/froala_editor.pkgd.min.css">
+    <script src="./froala_editor_4.0.18/js/froala_editor.pkgd.min.js"></script>\
+</head>
+
+<body>
+    <section class="account-main p-5">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-xl-3">
+                    <aside class="account-function">
+                        <div class="account-info p-3 text-center">
+                            <div class="mb-3">
+                                <div class="head-shot">
+                                    <div class="upload-head-shot m-auto">
+                                        <img src="https://picsum.photos/id/142/100/100">
+                                        <i class="fa fa-camera"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="member-full-name">
+                                <p>昱宇 陳</p>
+                            </div>
+                            <div class="membership text-grey">
+                                <p>白銀會員</p>
+                            </div>
+                            <div class="certified-group">
+                                <div class="certified d-flex align-items-center">
+                                    <div class="certified-pic">
+                                        <img src="img/facebook.svg" alt="">
+                                    </div>
+                                    <div class="certified-text p-2 text-start">
+                                        <span>FaceBook</span>
+                                    </div>
+                                </div>
+                                <div class="certified d-flex align-items-center">
+                                    <div class="certified-pic">
+                                        <img src="img/google.svg" alt="">
+                                    </div>
+                                    <div class="certified-text p-2 text-start">
+                                        <span>Google</span>
+                                    </div>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="account-function-list ps-0 mt-5">
+                            <li class="list-item">
+                                <a id="account-settings" class="d-flex align-items-center p-3" href="">
+                                    <span class="icon-box"><i class="fa-solid fa-house"></i></span>
+                                    <span class="list-item-title ps-3">供應商首頁</span>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                
+                                <a id="account-class" class="d-flex align-items-center p-3" href="">
+                                    <span class="icon-box"><i class="fa-solid fa-box-archive"></i></span>
+                                    <span class="list-item-title ps-3">商品管理</span>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a id="account-orders-management" class="d-flex align-items-center p-3" href="">
+                                    <span class="icon-box"><i class="fa-solid fa-file"></i></span>
+                                    <span class="list-item-title ps-3">訂單管理</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-12 col-xl-9">
+                    <div class="account-details py-3">
+                        <div class="details-title">
+                            <div class="d-flex align-items-center justify-content-between px-3">
+                                <h1 class="fs-3 m-0 fw-bold">商品管理</h1>
+                                <button class="btn edit-btn">新增商品</button>
+                            </div>
+                            <h2></h2>
+                            <div class="details-content mt-3" id="ck-feature"></div>
+                            <div class="details-content mt-3" id="ck-desc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        <script>
+            var ckFeature = new FroalaEditor('#ck-feature');
+            var ckDesc = new FroalaEditor('#ck-desc');
+            ckFeature.froalaEditor({
+                // ...
+                imageUploadURL: 'https://api.cloudinary.com/v1_1/djomhidix/image/upload',
+                imageUploadParams: {
+                    _token: '858748518451565',
+                    // other params
+                },
+                imageUploadMethod: 'POST',
+                imageAllowedTypes: ['jpeg', 'jpg', 'png', 'gif'],
+                // ...
+            });
+            ckFeature.froalaEditor({
+                // ...
+                imageManagerLoadURL: 'https://api.cloudinary.com/v1_1/djomhidix/ForProductDescription',
+                imageManagerDeleteURL: 'https://api.cloudinary.com/v1_1/djomhidix/ForProductDescription',
+                imageManagerDeleteMethod: 'POST',
+                imageManagerPageSize: 20,
+                imageManagerPreloader: '/path/to/preloader.gif',
+                // ...
+            });
+        </script>
+</body>
+
+</html>

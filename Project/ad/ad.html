@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="full-container">
+        <div class="container-set">
+            <div class="halloween my-4 banner-wrap" id="halloween" v-if="show" v-cloak>
+                <a href="/Activity/Double11">
+                    <div class="halloween banner-wrap of">
+                        <img class="banner-container banner-wrap-100" src="/assert/Double11/banner1111.jpeg" alt="">
+                        <div class="banner-container banner-wrap-80 d-flex justify-content-end ">
+                            <div class="banner-container-txt px-3 static-text">雙11訂房慶!今晚我想入住</div>
+                            <div class="dynamic-text-wrapper">
+                                <div class="dynamic-text banner-container-txt pe-3">無敵海景的酒店</div>
+                                <div class="dynamic-text banner-container-txt pe-3">與世獨立的民宿</div>
+                                <div class="dynamic-text banner-container-txt pe-3">在地特色的文旅</div>
+                                <div class="dynamic-text banner-container-txt pe-3">英倫浪漫的莊園</div>
+                            </div>
+                        </div>
+                        <div class="rb banner-container">
+                            <p class="mb-1 me-1"><i class="fa-regular fa-copyright"></i>點我參與雙十一心理測驗<i
+                                    class="fa-solid fa-basket-shopping"></i></p>
+                        </div>
+                    </div>
+                </a>
+                <div v-on:click="show=!show" class="banner-container rt  close">
+                    <p>X</p>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+/* #region  會員登入*/
+:root {
+    /*---------主色調-----------*/
+    --primary: #faf6ee;
+    --secondary: #b38932;
+    --third: #efe8db;
+    --primary_btn: #f6931f;
+    --hover_btn_bg: #fea741;
+    --white: #fff;
+    --shadow: rgb(115, 112, 112);
+    --dark: rgb(43, 42, 55);
+    --darkblue: rgba(41, 97, 194, 0.735);
+    --border: #dfdbdb;
+    --smoke: #c0bdbd;
+}
+
+main {
+    background-image: url(./christian3.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.landlord,
+.tenant {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.wraper {
+    margin: 50px 0px;
+}
+
+.nav-tabs li.nav-item a {
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.35;
+    color: #5c5c5c;
+}
+
+.nav-tabs .nav-link {
+    border-bottom-color: #ccc;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--third);
+    border-bottom-color: transparent;
+    border-top: 1px #ccc solid;
+    border-right: 1px #ccc solid;
+    border-left: 1px #ccc solid;
+}
+
+.nav-link {
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.35;
+    color: #5c5c5c;
+    border-bottom: solid 3px var(--primary);
+}
+
+.wraper a:hover {
+    outline: 0;
+    color: #fea741;
+}
+
+.wraper a {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.card-body {
+    padding: 5px;
+}
+
+.tab-content {
+    background-color: var(--third);
+}
+
+.googleLogin,
+.f_id_onload {
+    border: 1px solid black;
+    display: flex;
+    border-radius: 25px;
+    padding: 12px 20px;
+    position: relative;
+    max-width: 350px;
+    margin: auto;
+}
+
+.google-login-container {
+    /*padding-top: 20px;*/
+    padding: 20px 10px 0px;
+    border-right: 1px #ccc solid;
+    border-left: 1px #ccc solid;
+}
+
+.googleLogin p,
+.f_id_onload p {
+    text-align: center;
+    margin-bottom: 0;
+    flex-grow: 1;
+    vertical-align: bottom;
+    color: #000;
+    /*padding: 12px 20px 12px 0px;*/
+}
+
+.googleLogin img,
+.f_id_onload img {
+    left: 10px;
+    vertical-align: bottom;
+    /*padding-left: 20px;*/
+}
+
+/*form表單*/
+form {
+    border-bottom: 1px #ccc solid;
+    border-right: 1px #ccc solid;
+    border-left: 1px #ccc solid;
+    background-color: #EFE8db;
+    padding: 15px;
+}
+
+
+.email-text {
+    text-align: center;
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.email-text p {
+    width: 33.3333%;
+    color: gray;
+    margin-bottom: 0;
+}
+
+.email-text::before,
+.email-text::after {
+    content: '';
+    border-bottom: 1px solid gray;
+    width: 33.333333%;
+    position: relative;
+    bottom: 15px;
+}
+
+/* #endregion */
+/* #region  按鈕 */
+.btn-zuker-primary {
+    background-color: var(--primary_btn);
+    border: none;
+    font-size: 18px;
+    color: var(--white);
+}
+
+.btn-zuker-primary:hover {
+    background-color: #fea741;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.15rem #258cfb;
+}
+
+
+
+/* #endregion */
+/*.tab-pane {
+    line-height: 35px;
+}*/
+@media screen and (max-width:768px) {
+    .bg {
+        height: 100%;
+    }
+
+    .footer.footer.footer {
+        position: relative;
+    }
+
+    body {
+        margin-bottom: 0px;
+    }
+
+    .landlord,
+    .tenant {
+        display: none;
+    }
+
+}

@@ -1,0 +1,287 @@
+:root {
+    --primary: #faf6ee;
+    --secondary: #b38932;
+    --third: #efe8db;
+    --primary_btn: #f6931f;
+    --hover_btn_bg: #fea741;
+    --white: #fff;
+    --shadow: rgb(115, 112, 112);
+    --dark: rgb(43, 42, 55);
+    --darkblue: rgba(41, 97, 194, 0.735);
+    --border: #dfdbdb;
+    --smoke: #c0bdbd;
+}
+
+body {
+    font-family: Quicksand, "Noto Sans TC", -apple-system, "PingFang TC", BlinkMacSystemFont, Roboto, Ubuntu, "Noto Sans TC", "Segoe UI", "Helvetica Neue", Helvetica, "Source Han Sans TC", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+hr {
+    display: none;
+}
+
+/*--------------navbar-----------*/
+.navbar {
+    --bs-navbar-padding-y: 0rem;
+}
+
+nav .container-fluid {
+    border-bottom: #efdbb4 solid 5px;
+}
+
+nav .container-fluid .logo {
+    width: 60px;
+    height: 60px;
+}
+
+nav .container-fluid .logo img {
+    width: 120%;
+}
+
+/*---------reason-----------*/
+main {
+    background-color: var(--primary)
+}
+
+main h1 {
+    font-style: italic;
+    padding: 20px;
+}
+
+main .reason,
+main .foregin {
+    margin: auto;
+    padding: 40px 0px;
+}
+
+
+
+main .reason .reasonpic img,
+main .foregin .foreginpic img {
+    width: 100%;
+}
+
+
+main .reason .reasontxt,
+main .foregin .foregintxt {
+    text-align: justify;
+    line-height: 50px;
+    padding: 40px;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--shadow);
+
+}
+
+main .reason .reasontxt p,
+main .foregin .foregintxt p {
+    /* border: 1px solid black; */
+    padding: 20px;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+main .reason .reasontxt h2,
+main .history h2 {
+    color: var(--secondary);
+    font-style: italic;
+    font-size: 1.5rem;
+    padding: 10px;
+
+}
+
+/*---------history----------*/
+main .history {
+    padding: 20px;
+}
+
+main .history p {
+    /* border: 1px solid black; */
+    padding: 20px;
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--shadow);
+    text-align: justify;
+    line-height: 50px;
+    padding: 40px;
+}
+
+/*---------fooster-----------*/
+footer {
+    background-color: var(--third);
+    color: var(--primary_btn);
+    margin: auto;
+}
+
+footer .contain {
+    padding: 30px;
+    line-height: 30px;
+}
+
+footer .contain .context .solgan,
+.problem,
+.trem {
+    border-bottom: 1px solid var(--secondary);
+}
+
+footer .contain .context .problem .survice,
+.term .survice {
+    padding: 10px 0px 0px 0px;
+}
+
+footer .contain .context .solgan a {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+footer .contain .context .solgan p {
+    color: #564523;
+    font-size: 1rem;
+}
+
+footer .contain .context .problem .survice p,
+footer .contain .context .term .survice p {
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+footer .contain .context .problem .survice a,
+footer .contain .context .term .survice a {
+    color: #848383;
+    font-size: 1rem;
+}
+
+footer .contain .context .problem .survice a:hover,
+footer .contain .context .term .survice a:hover {
+    color: var(--dark);
+    font-size: 1rem;
+}
+
+footer .contain .contact {
+    display: flex;
+}
+
+footer .contain .contact li i {
+    padding-right: 20px;
+    color: #848383;
+    font-size: 2rem;
+}
+
+footer .contain .contact li i:hover {
+    color: var(--dark);
+    font-size: 2rem;
+}
+
+@media screen and (width >768px) {
+
+    main h1 {
+        padding: 50px 0px 0px 170px;
+    }
+
+    main .reason,
+    main .foregin,
+    main .history {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    main .reason,
+    main .foregin {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    main .foregin {
+        flex-direction: row-reverse;
+    }
+
+
+    main .reason .reasonpic,
+    main .foregin .foreginpic {
+        width: 500px;
+        padding: 0;
+
+    }
+
+    main .reason .reasonpic img,
+    main .foregin .foreginpic img {
+        width: 100%;
+    }
+
+    /* main .reason .reasontxt ,
+    main .foregin .foregintxt  {
+        width: 400px;
+    } */
+
+    main .reason .reasontxt p,
+    main .foregin .foregintxt p {
+        width: 400px;
+        line-height: 50px;
+    }
+
+    hr {
+        display: block;
+        width: 70%;
+        border: 2px solid var(--secondary);
+    }
+
+    /*---------history-----------*/
+
+    main .history {
+
+    }
+
+    /*---------footer-----------*/
+
+
+    footer .contain {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+        align-items: center;
+        height: 300px;
+    }
+
+    footer .contain .context {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+        width: 700px;
+    }
+
+
+    footer .contain .context .problem {
+        /* border: 2px blue solid; */
+        margin: 0px 50px 0px 10px;
+    }
+
+    footer .contain .context .solgan,
+    .problem,
+    .trem {
+        border-bottom: none;
+    }
+
+    footer .contain .context .solgan p {
+        width: 200px;
+        padding-top: 10px;
+    }
+
+    footer .contain .context .problem .survice a,
+    footer .contain .context .term .survice a {
+        padding: 0;
+    }
+}
