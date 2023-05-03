@@ -72,7 +72,8 @@ document.addEventListener('keyup', (e) => {
 })
 
 function filterZero(row) {
-    return row.filter(num => num != 0);//create a new array without zeroes
+    return row.filter(num => num != 0);
+    //create a new array without zeroes
 }
 
 function slide(row) {

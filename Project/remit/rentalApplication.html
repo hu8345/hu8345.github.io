@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+        * {
+            font-family: Quicksand, "Noto Sans TC", -apple-system, "PingFang TC", BlinkMacSystemFont, Roboto, Ubuntu, "Noto Sans TC", "Segoe UI", "Helvetica Neue", Helvetica, "Source Han Sans TC", sans-serif;
+        }
+
+
+        p {
+            margin: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .RentalHouseData {
+            background-color: var(--primary);
+        }
+
+        .btn-hugo {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            background-color: orange;
+            color: white;
+            border: 2px solid orange;
+        }
+
+        .btn-hugo:hover {
+            background-color: rgb(253, 180, 44);
+            border: 2px solid rgb(253, 180, 44);
+        }
+
+        @media screen and (min-width:768px) {
+            .pic {
+                max-width: 75%;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="RentalHouseData">
+        <div class="container" id="RentalApplication">
+            <div class="title fs-1 text-center" v-if="OrderType">確認房客租屋申請</div>
+            <div class="title fs-1 text-center" v-else>房客申請資料檢視</div>
+            <div class="row ">
+                <div class="col-12 pic mb-3 text-center">
+                    <img class="w-100 " :src="rentalData.houseFristPic">
+                </div>
+            </div>
+            <div class="row">
+                <table class="table w-75 mx-auto ">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="text-center fs-5 " scope="col">租屋資訊</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="w-100 " scope="row">房屋名稱:</th>
+                            <td class="">{{rentalData.houseName}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">租金:</th>
+                            <td class="">{{rentalData.rent}}元/月</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">押金:</th>
+                            <td class="">{{rentalData.deposit}}個月</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">承租人:</th>
+                            <td class="">{{rentalData.renterName}}</td>
+                        </tr>
+
+                        <tr>
+                            <th class="w-100" scope="row">電話:</th>
+                            <td class="">{{rentalData.phone}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">承租地址:</th>
+                            <td class="">{{rentalData.address}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">承租時間:</th>
+                            <td class="">{{rentalData.leaseTime}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">電費:</th>
+                            <td class="">{{rentalData.electricityFee}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">水費:</th>
+                            <td class="">{{rentalData.waterFee}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">瓦斯費:</th>
+                            <td class="">{{rentalData.gasFee}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">管理費:</th>
+                            <td class="">{{rentalData.managemenFee}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">網路費:</th>
+                            <td class="">{{rentalData.internetFee}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">清潔費:</th>
+                            <td class="">{{rentalData.cleaningFee}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">租約開始日期:</th>
+                            <td class="">{{rentalData.execution}}</td>
+                        </tr>
+                        <tr>
+                            <th class="w-100" scope="row">租約結束日期:</th>
+                            <td class="">{{rentalData.expire}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 w-75 mx-auto d-flex justify-content-center mb-5">
+                    <button type="button" @@click="changeOrderType(1)" v-if="OrderType"
+                        class="btn-hugo mx-3">確認承租</button>
+                    <button type="button" @@click="changeOrderType(0)" v-if="OrderType"
+                        class="btn-hugo mx-3">不予承租</button>
+                    <a type="button" asp-controller="center" asp-action="center" v-else class="btn-hugo mx-3">返回會員中心</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
